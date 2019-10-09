@@ -9,7 +9,7 @@ before:
   - type: createPullRequest
     title: New Song
     head: twinkle-twinkle # template: create a branch with twinkle twinkle, mess up one note, mess up one rhythm
-
+    body: 00_fix-note.md
 steps:
 
 # Step 1: change a note
@@ -28,11 +28,15 @@ steps:
         right: '%actions.twinkleFile%'
         else:
         - type: respond
+<<<<<<< HEAD
           with: 01e-retry-note.md
+=======
+          with: 01_retry-note.md    
+>>>>>>> response-beta
 
       # prep for step 2
       - type: respond
-        with: # This is how rhythms work (example), please change one
+        with: 01_change-rhythm.md
 
 
 # Step 2: Change a rhythm
@@ -61,7 +65,7 @@ steps:
 
   # prep for step 3
       - type: respond
-        with: # - this is how time sigs work, (example), please change one
+        with: 02_time-signature.md
 
 # Step 3: Change time signature
   # user to change time signature
@@ -85,7 +89,7 @@ steps:
         - type: respond
           with: 03e-retry-time-signature.md
   # - tell them how to play it
-
+  with: 03_chords.md
   # prep for step 4
       - type: respond
         with: # - this is how chords work, (example), please change one
@@ -113,7 +117,7 @@ steps:
 
   # prep for step 5:
       - type: respond
-        with: # - this is how key signatures work
+        with: 04_key-signature.md
 
 # Step 5: Change key signature
 
@@ -138,7 +142,7 @@ steps:
 
   # prep for step 6:
       - type: respond
-        with: # - this is how accidentals work
+        with: 05_accidentals.md
 
 # Step 6: Accidentals
 
@@ -163,7 +167,7 @@ steps:
 
   # prep for step 7:
       - type: respond
-        with: # - this is how dynamics work
+        with: 06_dynamics.md
 
 # Step 7: Dynamics
 
@@ -188,4 +192,10 @@ steps:
 
   # end of course
       - type: respond
-        with: 07-congratulations.md
+        with: 07_merge.md
+  # end of course
+
+# Step 8: Approve and merge
+
+  with: 08_congratulations.md
+  with: 08_next.md
