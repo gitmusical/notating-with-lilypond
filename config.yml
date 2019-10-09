@@ -18,8 +18,8 @@ before:
       editUrl: '%payload.repository.html_url%/edit/twinkle-twinkle/twinkle-twinkle.ly?pr=/%payload.repository.full_name%/pull/1'
 steps:
 
-  - title: Change a note
-    description: Change a note
+  - title: Correct the melody
+    description: Change a note to correct the melody
     event: pull_request.synchronize
     link: '{{ repoUrl }}/pull/1'
     actions:
@@ -47,7 +47,7 @@ steps:
           editUrl: '%payload.repository.html_url%/edit/twinkle-twinkle/twinkle-twinkle.ly?pr=/%payload.repository.full_name%/pull/1'
 
   - title: Change a rhythm
-    description: Change a rhythm
+    description: Change the notation of note duration to match the traditional rhythm
     event: pull_request.synchronize
     link: '{{ repoUrl }}/pull/1'
     actions:
@@ -81,8 +81,8 @@ steps:
         data:
           editUrl: '%payload.repository.html_url%/edit/twinkle-twinkle/twinkle-twinkle.ly?pr=/%payload.repository.full_name%/pull/1'
 
-  - title: Change a time signature
-    description: Change a time signature
+  - title: Change the time signature
+    description: Specify a time signature of 2/4
     event: pull_request.synchronize
     link: '{{ repoUrl }}/pull/1'
     actions:
@@ -112,7 +112,7 @@ steps:
 
   # user to create or change a chord:
   - title: Create a chord
-    description: Create a chord
+    description: Create a chord with C and G on the last note of the song
     event: pull_request.synchronize
     link: '{{ repoUrl }}/pull/1'
     actions:
@@ -138,8 +138,8 @@ steps:
         data:
           editUrl: '%payload.repository.html_url%/edit/twinkle-twinkle/twinkle-twinkle.ly?pr=/%payload.repository.full_name%/pull/1'
 
-  - title: Change a key signature
-    description: Change a key signature
+  - title: Change the key signature
+    description: Change the key signature from C major to C minor
     event: pull_request.synchronize
     link: '{{ repoUrl }}/pull/1'
     actions:
@@ -166,7 +166,7 @@ steps:
           editUrl: '%payload.repository.html_url%/edit/twinkle-twinkle/twinkle-twinkle.ly?pr=/%payload.repository.full_name%/pull/1'
 
   - title: Add an accidental
-    description: Add an accidental
+    description: Add a flat on the second A note
     event: pull_request.synchronize
     link: '{{ repoUrl }}/pull/1'
     actions:
@@ -193,7 +193,7 @@ steps:
           editUrl: '%payload.repository.html_url%/edit/twinkle-twinkle/twinkle-twinkle.ly?pr=/%payload.repository.full_name%/pull/1'
 
   - title: Add a dynamic marking
-    description: Add a dynamic marking
+    description: Add a marking for piano on the first F note
     event: pull_request.synchronize
     link: '{{ repoUrl }}/pull/1'
     actions:
@@ -218,8 +218,8 @@ steps:
       - type: respond
         with: 08_merge.md
 
-  - title: Approve and merge the PR
-    description: Approve and merge the PR
+  - title: Approve and merge 
+    description: Approve and merge the pull request
     event: pull_request.closed
     link: '{{ repoUrl }}/pull/1'
     actions:
