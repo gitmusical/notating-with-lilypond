@@ -153,7 +153,7 @@ steps:
         right: '%actions.twinkleFile%'
         else:
         - type: respond
-          with: 05e-retry-key-signature.md
+          with: 05e_retry-key-signature.md
 
 # ---
 # Step 6: Accidentals
