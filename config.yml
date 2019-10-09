@@ -4,7 +4,10 @@ description: Learn how to notate music with Lilypond
 template:
   repo: notating-with-lilypond-template
   name: notating-with-lilypond
-#prep for first step
+
+# ---
+# Step 1: change a note
+# prep for first step
 before: 
   - type: updateBranchProtection
   - type: createPullRequest
@@ -14,13 +17,13 @@ before:
 
 steps:
 
-# Step 1: change a note
-
   - title: Change a note
     description: Change a note
     event: pull_request.synchronize
     link: '{{ repoUrl }}/pulls/1'
     actions:
+
+    # feedback for step 1: 
       - type: getFileContents
         filename: twinkle-twinkle.ly
         action_id: twinkleFile
