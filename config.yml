@@ -223,5 +223,8 @@ steps:
       title: Congratulations
       body: 08_congratulations.md
       head: congratulations
+      action_id: finalPr
     - type: respond
       with: 08_next.md
+      data:
+        prLink: '%actions.finalPr.data.html_url%'
