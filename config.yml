@@ -4,18 +4,88 @@ description: Learn how to notate music with Lilypond
 template:
   repo: notating-with-lilypond-template
   name: notating-with-lilypond
-before:
-  - type: createIssue
-    title: Welcome!
-    body: new-issue.md
+#prep for first step
+before: 
   - type: createPullRequest
     title: New Song
-    head: twinkle-twinkle
-    base: master
+    head: twinkle-twinkle # template: create a branch with twinkle twinkle, mess up one note, mess up one rhythm
+
 steps:
-  - title: First step
-    description: The first step in your course
-    event: issues.assigned
-    link: '{{ repoUrl }}'
+
+# Step 1: change a note
+
+  - title: Change a note
+    description: Change a note
+    event: pull_request.synchronize
+    link: '{{ repoUrl }}/pulls/1'
     actions:
-      - type: closeIssue
+      - type: getFileContents
+        filename: twinkle-twinkle.ly
+        action_id: twinkleFile
+      - type: gate
+        left: # create regex
+        operator: test
+        right: '%actions.twinkleFile%'
+        else:
+        - type: respond
+          with: 01-retry-note.md
+
+      # prep for step 2
+      - type: respond
+        with: # This is how rhythms work (example), please change one
+
+
+# Step 2: Change a rhythm
+  # user changes rhythm
+
+  # feedback for step 2: 
+  # - check if they changed a rhythm
+  # - respond if they did it or not (possibly ask to redo)
+  # - tell them how to play it
+
+  # prep for step 3
+  # - this is how time sigs work, (example), please change one
+
+# Step 3: Change time signature
+
+  # user to change time signature
+
+  # feedback for step 3:
+  # - check if they changed a time sig
+  # - respond if they did it or not (possibly ask to redo)
+  # - tell them how to play it
+
+  # prep for step 4
+  # - this is how chords work, (example), please change one
+
+# Step 4: Multiple notes (chord)
+
+  # user to:
+
+  # feedback for step 4:
+
+  # prep for step 5:
+
+# Step 5: Change key signature
+
+  # user to:
+
+  # feedback for step 5:
+
+  # prep for step 6:
+
+# Step 6: Accidentals
+
+  # user to:
+
+  # feedback for step 6:
+
+  # prep for step 7:
+
+# Step 7: Dynamics
+
+  # user to:
+
+  # feedback for step 7:
+
+  # end of course
