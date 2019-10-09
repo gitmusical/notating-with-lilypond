@@ -23,7 +23,7 @@ As seen on [LilyPond's documentation](http://lilypond.org/doc/v2.18/Documentatio
 ### :keyboard: Activity: Change the dynamic marking from `mf` to `p`
 
 1. [Edit the `twinkle-twinkle.ly` file on this branch]({{ editUrl }})
-2. Edit the dynamic marking, changing it from mezzo-forte (`mf`) to piano (`p`)
+2. Add a dynamic marking of _piano_, `\p`, on the first `f` note
 3. Save and commit your changes to this branch
 
 I'll respond when I detect a new commit on this branch.
