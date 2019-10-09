@@ -14,11 +14,11 @@ If you chose to visualize the changes as music notation after you changed the ke
 
 To change how these notes are visualized, we will add the notation for flats by the notes that we want to actually be flat.
 
-**Flats** are notated with `es` after a note, like `ces` for cb.
+**Flats** are notated with `es` after a note, like `ces` for c♭.
 
-**Sharps** are notated with `is` after a note, like `cis` for c#.
+**Sharps** are notated with `is` after a note, like `cis` for c♯.
 
-Naturals are always assumed.
+Naturals (♮) are always assumed.
 
 ## Step 6: Add an accidental
 
