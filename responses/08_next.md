@@ -20,3 +20,4 @@ In this course, you learned how to notate music with LilyPond. You
 - You can learn more about LilyPond at <http://lilypond.org/>
 - For a more thorough introduction, look at the [Learning Manual](http://lilypond.org/doc/v2.18/Documentation/learning/index.html).
 - For over 2000 free scores in LilyPond format, check out [Mutopia](https://www.mutopiaproject.org/).
+- Play with LilyPad live on [LilyBin](http://lilybin.com/).
