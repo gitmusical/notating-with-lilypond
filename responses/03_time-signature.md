@@ -10,7 +10,7 @@ Right now, the compiled piece would look like this:
 
 ![twinkle twinkle initial version](https://gitmusical.github.io/notating-twinkle/2-rhythm.png)
 
-You can also see and play the file on [LilyBin]().
+You can also see and play the file on [LilyBin](http://lilybin.com/7jlknt/1).
 
 ### Time Signatures
 
