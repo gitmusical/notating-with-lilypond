@@ -199,6 +199,7 @@ steps:
 # Step 8: Approve and merge
 # user to: approve and merge their PR
   # prep for step 8
+      - type: requestReviewFromRegistrant
       - type: respond
         with: 08_merge.md
 
