@@ -149,7 +149,7 @@ steps:
         filename: twinkle-twinkle.ly
         action_id: twinkleFile
       - type: gate
-        left: /^\s*\\key\s+c\s+\\minor\s*$/gm # create regex
+        left: /\{[^}]*?\\key\s+c\s+\\minor[^}]*?\}/gm # create regex
         operator: test
         right: '%actions.twinkleFile%'
         else:
