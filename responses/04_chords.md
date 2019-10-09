@@ -10,6 +10,8 @@ Right now, the compiled piece would look like this:
 
 ![twinkle twinkle initial version](https://gitmusical.github.io/notating-twinkle/3-time-sig.png)
 
+You can also see and play the file on [LilyBin]().
+
 ### Chords
 
 You may have noticed so far that our example has many instances of only one note, but there is an example of a chord.

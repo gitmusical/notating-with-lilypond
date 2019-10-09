@@ -8,6 +8,8 @@ Right now, the compiled piece would look like this:
 
 ![twinkle twinkle initial version](https://gitmusical.github.io/notating-twinkle/5-key-sig.png)
 
+You can also see and play the file on [LilyBin]().
+
 ### Accidentals on LilyPond
 
 If you chose to visualize the changes as music notation after you changed the key signature, you may have noticed that the notes affected were automatically notated as naturals.

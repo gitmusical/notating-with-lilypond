@@ -8,6 +8,8 @@ Right now, the compiled piece would look like this:
 
 ![twinkle twinkle initial version](https://gitmusical.github.io/notating-twinkle/1-pitch.png)
 
+You can also see and play the file on [LilyBin]().
+
 ### Rhythm
 
 In LilyPond, rhythm is dictated through symbols. As stated in [LilyPond's documentation](http://lilypond.org/doc/v2.18/Documentation/notation/writing-rhythms),

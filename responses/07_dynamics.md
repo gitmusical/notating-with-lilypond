@@ -8,6 +8,8 @@ Right now, the compiled piece would look like this:
 
 ![twinkle twinkle initial version](https://gitmusical.github.io/notating-twinkle/6-accidental.png)
 
+You can also see and play the file on [LilyBin]().
+
 ### Dynamics on LilyPond
 
 As you may have noticed, musical notation is typically associated with the pitch. Dynamics are included directly after a pitch. You can see this already in our song.
