@@ -4,21 +4,25 @@ description: Learn how to notate music with Lilypond
 template:
   repo: notating-with-lilypond-template
   name: notating-with-lilypond
-#prep for first step
+
+# ---
+# Step 1: change a note
+# prep for first step
 before: 
+  - type: updateBranchProtection
   - type: createPullRequest
     title: New Song
     head: twinkle-twinkle # template: create a branch with twinkle twinkle, mess up one note, mess up one rhythm
-    body: 00_fix-note.md
+    body: 01_fix-note.md
 steps:
-
-# Step 1: change a note
 
   - title: Change a note
     description: Change a note
     event: pull_request.synchronize
     link: '{{ repoUrl }}/pulls/1'
     actions:
+
+    # feedback for step 1: 
       - type: getFileContents
         filename: twinkle-twinkle.ly
         action_id: twinkleFile
@@ -28,19 +32,15 @@ steps:
         right: '%actions.twinkleFile%'
         else:
         - type: respond
-<<<<<<< HEAD
-          with: 01e-retry-note.md
-=======
-          with: 01_retry-note.md    
->>>>>>> response-beta
+          with: 01e_retry-note.md
+
+# ---
+# Step 2: Change a rhythm
+  # user changes rhythm
 
       # prep for step 2
       - type: respond
-        with: 01_change-rhythm.md
-
-
-# Step 2: Change a rhythm
-  # user changes rhythm
+        with: 02_change-rhythm.md
 
   - title: Change a rhythm
     description: Change a rhythm
@@ -61,14 +61,15 @@ steps:
     # - respond if they did it or not (possibly ask to redo)
     # - tell them how to play it
         - type: respond
-          with: 02e-retry-rhythm.md
+          with: 02e_retry-rhythm.md
 
-  # prep for step 3
-      - type: respond
-        with: 02_time-signature.md
-
+# ---
 # Step 3: Change time signature
   # user to change time signature
+  # prep for step 3
+      - type: respond
+        with: 03_time-signature.md
+
   - title: Change a time signature
     description: Change a time signature
     event: pull_request.synchronize
@@ -87,14 +88,14 @@ steps:
         right: '%actions.twinkleFile%'
         else:
         - type: respond
-          with: 03e-retry-time-signature.md
+          with: 03e_retry-time-signature.md
   # - tell them how to play it
-  with: 03_chords.md
+
+# ---
+# Step 4: Multiple notes (chord)
   # prep for step 4
       - type: respond
-        with: # - this is how chords work, (example), please change one
-
-# Step 4: Multiple notes (chord)
+        with: 04_chords.md
 
   # user to create or change a chord:
   - title: Create a chord
@@ -113,15 +114,15 @@ steps:
         right: '%actions.twinkleFile%'
         else:
         - type: respond
-          with: 04e-retry-chord.md
+          with: 04e_retry-chord.md
 
-  # prep for step 5:
-      - type: respond
-        with: 04_key-signature.md
-
+# ---
 # Step 5: Change key signature
-
   # user to: change key signature
+# prep for step 5:
+      - type: respond
+        with: 05_key-signature.md
+
   - title: Change a key signature
     description: Change a key signature
     event: pull_request.synchronize
@@ -140,13 +141,13 @@ steps:
         - type: respond
           with: 05e-retry-key-signature.md
 
+# ---
+# Step 6: Accidentals
+  # user to: add an accidental
   # prep for step 6:
       - type: respond
-        with: 05_accidentals.md
+        with: 06_accidentals.md
 
-# Step 6: Accidentals
-
-  # user to: add an accidental
   - title: Add an accidental
     description: Add an accidental
     event: pull_request.synchronize
@@ -163,15 +164,15 @@ steps:
         right: '%actions.twinkleFile%'
         else:
         - type: respond
-          with: 06e-retry-accidental.md
+          with: 06e_retry-accidental.md
 
+# ---
+# Step 7: Dynamics
+  # user to: add dynamic marking
   # prep for step 7:
       - type: respond
-        with: 06_dynamics.md
+        with: 07_dynamics.md
 
-# Step 7: Dynamics
-
-  # user to: add dynamic marking
   - title: Add a dynamic marking
     description: Add a dynamic marking
     event: pull_request.synchronize
@@ -188,14 +189,25 @@ steps:
         right: '%actions.twinkleFile%'
         else:
         - type: respond
-          with: 07e-retry-dynamic.md
+          with: 07e_retry-dynamic.md
 
-  # end of course
-      - type: respond
-        with: 07_merge.md
-  # end of course
-
+# ---
 # Step 8: Approve and merge
+# user to: approve and merge their PR
+  # prep for step 8
+      - type: respond
+        with: 08_merge.md
 
-  with: 08_congratulations.md
-  with: 08_next.md
+  - title: Approve and merge the PR
+    description: Approve and merge the PR
+    event: pull_request.closed
+    link: '{{ repoUrl }}/pulls/1'
+    actions:
+
+    #feedback for step 8
+    - type: createPullRequest
+      title: Congratulations
+      body: 08_congratulations.md
+      head: congratulations
+    - type: respond
+      with: 08_next.md
