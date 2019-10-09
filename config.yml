@@ -9,6 +9,7 @@ before:
   - type: createPullRequest
     title: New Song
     head: twinkle-twinkle # template: create a branch with twinkle twinkle, mess up one note, mess up one rhythm
+    body: 00-intro-to-song.md
 
 steps:
 
