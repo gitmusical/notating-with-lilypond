@@ -52,3 +52,5 @@ This pull request introduces a file called `twinkle-twinkle.ly`. This file is th
 1. [Edit the `twinkle-twinkle.ly` file on this branch]({{ editUrl }})
 2. Identify and correct the note in the pattern
 3. Save and commit your changes to this branch
+
+I'll respond when I detect a new commit on this branch.
