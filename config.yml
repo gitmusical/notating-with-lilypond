@@ -28,7 +28,7 @@ steps:
         filename: twinkle-twinkle.ly
         action_id: twinkleFile
       - type: gate
-        left: # create regex
+        left: /.*/gi # create regex
         operator: test
         right: '%actions.twinkleFile%'
         else:
@@ -55,7 +55,7 @@ steps:
         filename: twinkle-twinkle.ly
         action_id: twinkleFile
       - type: gate
-        left: # create regex
+        left: /.*/gi # create regex
         operator: test
         right: '%actions.twinkleFile%'
         else:
@@ -84,7 +84,7 @@ steps:
         filename: twinkle-twinkle.ly
         action_id: twinkleFile
       - type: gate
-        left: # create regex
+        left: /.*/gi # create regex
         operator: test
         right: '%actions.twinkleFile%'
         else:
@@ -110,7 +110,7 @@ steps:
         filename: twinkle-twinkle.ly
         action_id: twinkleFile
       - type: gate
-        left: # create regex
+        left: /.*/gi # create regex
         operator: test
         right: '%actions.twinkleFile%'
         else:
@@ -135,7 +135,7 @@ steps:
         filename: twinkle-twinkle.ly
         action_id: twinkleFile
       - type: gate
-        left: # create regex
+        left: /.*/gi # create regex
         operator: test
         right: '%actions.twinkleFile%'
         else:
@@ -160,7 +160,7 @@ steps:
         filename: twinkle-twinkle.ly
         action_id: twinkleFile
       - type: gate
-        left: # create regex
+        left: /.*/gi # create regex
         operator: test
         right: '%actions.twinkleFile%'
         else:
@@ -185,7 +185,7 @@ steps:
         filename: twinkle-twinkle.ly
         action_id: twinkleFile
       - type: gate
-        left: # create regex
+        left: /.*/gi # create regex
         operator: test
         right: '%actions.twinkleFile%'
         else:
