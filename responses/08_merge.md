@@ -8,6 +8,7 @@ Right now, the compiled piece would look like this:
 
 ![twinkle twinkle initial version](https://gitmusical.github.io/notating-twinkle/7-dynamic.png)
 
+You can also see and play the file on [LilyBin](http://lilybin.com/l43o6t/1).
 
 ## Step 8: Approve and merge
 

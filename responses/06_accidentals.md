@@ -6,7 +6,9 @@ We have created a version of the song in its current form, and [you can listen t
 
 Right now, the compiled piece would look like this:
 
-![twinkle twinkle initial version](https://gitmusical.github.io/notating-twinkle/5-key-sig)
+![twinkle twinkle initial version](https://gitmusical.github.io/notating-twinkle/5-key-sig.png)
+
+You can also see and play the file on [LilyBin](http://lilybin.com/pxpm7v/1).
 
 ### Accidentals on LilyPond
 
@@ -14,11 +16,11 @@ If you chose to visualize the changes as music notation after you changed the ke
 
 To change how these notes are visualized, we will add the notation for flats by the notes that we want to actually be flat.
 
-**Flats** are notated with `es` after a note, like `ces` for cb.
+**Flats** are notated with `es` after a note, like `ces` for c♭.
 
-**Sharps** are notated with `is` after a note, like `cis` for c#.
+**Sharps** are notated with `is` after a note, like `cis` for c♯.
 
-Naturals are always assumed.
+Naturals (♮) are always assumed.
 
 ## Step 6: Add an accidental
 

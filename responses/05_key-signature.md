@@ -8,9 +8,11 @@ Right now, the compiled piece would look like this:
 
 ![twinkle twinkle initial version](https://gitmusical.github.io/notating-twinkle/4-chord.png)
 
+You can also see and play the file on [LilyBin](http://lilybin.com/7z8zgj/1).
+
 ### Key signatures on LilyPond
 
-Like with the time signature, the key signature is notated with `/key` followed by the signature, like `\key a \minor`. In a file, this would look like:
+Like with the time signature, the key signature is notated with `/key` followed by the signature, like `\key c \minor`. In a file, this would look like:
 
 ```ly
 \relative c' {
