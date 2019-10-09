@@ -87,7 +87,7 @@ steps:
         filename: twinkle-twinkle.ly
         action_id: twinkleFile
       - type: gate
-        left: /.*/gm # create regex
+        left: /^\s*\\time\s+2\/4\s*$/gm # create regex
         operator: test
         right: '%actions.twinkleFile%'
         else:
