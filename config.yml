@@ -21,7 +21,7 @@ steps:
   - title: Change a note
     description: Change a note
     event: pull_request.synchronize
-    link: '{{ repoUrl }}/pulls/1'
+    link: '{{ repoUrl }}/pull/1'
     actions:
 
     # feedback for step 1: 
@@ -49,7 +49,7 @@ steps:
   - title: Change a rhythm
     description: Change a rhythm
     event: pull_request.synchronize
-    link: '{{ repoUrl }}/pulls/1'
+    link: '{{ repoUrl }}/pull/1'
     actions:
 
     # feedback for step 2: 
@@ -79,7 +79,7 @@ steps:
   - title: Change a time signature
     description: Change a time signature
     event: pull_request.synchronize
-    link: '{{ repoUrl }}/pulls/1'
+    link: '{{ repoUrl }}/pull/1'
     actions:
 
   # feedback for step 3:
@@ -109,7 +109,7 @@ steps:
   - title: Create a chord
     description: Create a chord
     event: pull_request.synchronize
-    link: '{{ repoUrl }}/pulls/1'
+    link: '{{ repoUrl }}/pull/1'
     actions:
 
   # feedback for step 4:
@@ -136,7 +136,7 @@ steps:
   - title: Change a key signature
     description: Change a key signature
     event: pull_request.synchronize
-    link: '{{ repoUrl }}/pulls/1'
+    link: '{{ repoUrl }}/pull/1'
     actions:
 
   # feedback for step 5:
@@ -163,7 +163,7 @@ steps:
   - title: Add an accidental
     description: Add an accidental
     event: pull_request.synchronize
-    link: '{{ repoUrl }}/pulls/1'
+    link: '{{ repoUrl }}/pull/1'
     actions:
 
   # feedback for step 6:
@@ -190,7 +190,7 @@ steps:
   - title: Add a dynamic marking
     description: Add a dynamic marking
     event: pull_request.synchronize
-    link: '{{ repoUrl }}/pulls/1'
+    link: '{{ repoUrl }}/pull/1'
     actions:
 
   # feedback for step 7:
@@ -215,7 +215,7 @@ steps:
   - title: Approve and merge the PR
     description: Approve and merge the PR
     event: pull_request.closed
-    link: '{{ repoUrl }}/pulls/1'
+    link: '{{ repoUrl }}/pull/1'
     actions:
 
     #feedback for step 8
