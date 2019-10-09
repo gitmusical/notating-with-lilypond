@@ -1,6 +1,6 @@
 # Chords with LilyPond
 
-Nice job with the time signature! What do you notice about the barlines? If you'd like to listen before we move on to the next step, here's how you:
+Nice job with the time signature! What do you notice about the barlines? If you'd like to listen before we move on to the next step, here's how:
 
 ### Chords
 

@@ -15,11 +15,11 @@ The main block of notes in our piece currently look like:
 }
 ```
 
-If we were to specify 4/4 time, we would add a line before the notes, but within the block, like this:
+If we were to specify 2/4 time, we would add a line before the notes, but within the block, like this:
 
 ```ly
 \relative c' {
-  \time 4/4
+  \time 2/4
   c8\mf c g' b
   a a <g d>4
   f4 f e e
