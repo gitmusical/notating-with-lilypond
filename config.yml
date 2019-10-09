@@ -1,6 +1,6 @@
-title: notating-with-lilypond
-tagline: A brand new course on Learning Lab
-description: Learn how to notate music with Lilypond
+title: Notating with LilyPond
+tagline: Learn how to notate music with LilyPond
+description: LilyPond is an open source technology for notating music in plain text files. In this course, we'll cover the fundamentals of music notation in LilyPond.
 template:
   repo: notating-with-lilypond-template
   name: notating-with-lilypond
@@ -14,12 +14,14 @@ before:
     title: New Song
     head: twinkle-twinkle # template: create a branch with twinkle twinkle, mess up one note, mess up one rhythm
     body: 01_fix-note.md
+    data:
+      editUrl: '%payload.repository.html_url%/edit/twinkle-twinkle/twinkle-twinkle.ly?pr=/%payload.repository.full_name%/pull/1'
 steps:
 
   - title: Change a note
     description: Change a note
     event: pull_request.synchronize
-    link: '{{ repoUrl }}/pulls/1'
+    link: '{{ repoUrl }}/pull/1'
     actions:
 
     # feedback for step 1: 
@@ -41,11 +43,13 @@ steps:
       # prep for step 2
       - type: respond
         with: 02_change-rhythm.md
+        data:
+          editUrl: '%payload.repository.html_url%/edit/twinkle-twinkle/twinkle-twinkle.ly?pr=/%payload.repository.full_name%/pull/1'
 
   - title: Change a rhythm
     description: Change a rhythm
     event: pull_request.synchronize
-    link: '{{ repoUrl }}/pulls/1'
+    link: '{{ repoUrl }}/pull/1'
     actions:
 
     # feedback for step 2: 
@@ -73,11 +77,13 @@ steps:
   # prep for step 3
       - type: respond
         with: 03_time-signature.md
+        data:
+          editUrl: '%payload.repository.html_url%/edit/twinkle-twinkle/twinkle-twinkle.ly?pr=/%payload.repository.full_name%/pull/1'
 
   - title: Change a time signature
     description: Change a time signature
     event: pull_request.synchronize
-    link: '{{ repoUrl }}/pulls/1'
+    link: '{{ repoUrl }}/pull/1'
     actions:
 
   # feedback for step 3:
@@ -100,12 +106,14 @@ steps:
   # prep for step 4
       - type: respond
         with: 04_chords.md
+        data:
+          editUrl: '%payload.repository.html_url%/edit/twinkle-twinkle/twinkle-twinkle.ly?pr=/%payload.repository.full_name%/pull/1'
 
   # user to create or change a chord:
   - title: Create a chord
     description: Create a chord
     event: pull_request.synchronize
-    link: '{{ repoUrl }}/pulls/1'
+    link: '{{ repoUrl }}/pull/1'
     actions:
 
   # feedback for step 4:
@@ -126,11 +134,13 @@ steps:
 # prep for step 5:
       - type: respond
         with: 05_key-signature.md
+        data:
+          editUrl: '%payload.repository.html_url%/edit/twinkle-twinkle/twinkle-twinkle.ly?pr=/%payload.repository.full_name%/pull/1'
 
   - title: Change a key signature
     description: Change a key signature
     event: pull_request.synchronize
-    link: '{{ repoUrl }}/pulls/1'
+    link: '{{ repoUrl }}/pull/1'
     actions:
 
   # feedback for step 5:
@@ -151,11 +161,13 @@ steps:
   # prep for step 6:
       - type: respond
         with: 06_accidentals.md
+        data:
+          editUrl: '%payload.repository.html_url%/edit/twinkle-twinkle/twinkle-twinkle.ly?pr=/%payload.repository.full_name%/pull/1'
 
   - title: Add an accidental
     description: Add an accidental
     event: pull_request.synchronize
-    link: '{{ repoUrl }}/pulls/1'
+    link: '{{ repoUrl }}/pull/1'
     actions:
 
   # feedback for step 6:
@@ -176,11 +188,13 @@ steps:
   # prep for step 7:
       - type: respond
         with: 07_dynamics.md
+        data:
+          editUrl: '%payload.repository.html_url%/edit/twinkle-twinkle/twinkle-twinkle.ly?pr=/%payload.repository.full_name%/pull/1'
 
   - title: Add a dynamic marking
     description: Add a dynamic marking
     event: pull_request.synchronize
-    link: '{{ repoUrl }}/pulls/1'
+    link: '{{ repoUrl }}/pull/1'
     actions:
 
   # feedback for step 7:
@@ -206,7 +220,7 @@ steps:
   - title: Approve and merge the PR
     description: Approve and merge the PR
     event: pull_request.closed
-    link: '{{ repoUrl }}/pulls/1'
+    link: '{{ repoUrl }}/pull/1'
     actions:
 
     #feedback for step 8
@@ -214,5 +228,8 @@ steps:
       title: Congratulations
       body: 08_congratulations.md
       head: congratulations
+      action_id: finalPr
     - type: respond
       with: 08_next.md
+      data:
+        prLink: '%actions.finalPr.data.html_url%'

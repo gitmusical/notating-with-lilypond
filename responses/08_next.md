@@ -1,4 +1,4 @@
-Good job, @{{ user.username }}! You're done! We opened a pull request with your final _notes_.
+Good job, @{{ user.username }}! You're done! We opened [a pull request]({{ prLink }}) with your final _notes_.
 
 ![congratulations](https://octodex.github.com/images/welcometocat.png)
 
