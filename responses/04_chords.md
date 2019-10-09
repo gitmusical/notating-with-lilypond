@@ -4,13 +4,13 @@
 
 Nice job with the time signature! What do you notice about the barlines?
 
-We have created a version of the song in its current form, and [you can listen to it here](https://gitmusical.github.io/notating-twinkle/3-time-sig). 
+We have created a version of the song in its current form, and [you can listen to it here](https://gitmusical.github.io/notating-twinkle/3-time-sig).
 
 Right now, the compiled piece would look like this:
 
 ![twinkle twinkle initial version](https://gitmusical.github.io/notating-twinkle/3-time-sig.png)
 
-You can also see and play the file on [LilyBin]().
+You can also see and play the file on [LilyBin](http://lilybin.com/kcqg5i/1).
 
 ### Chords
 

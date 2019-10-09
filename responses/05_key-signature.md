@@ -8,7 +8,7 @@ Right now, the compiled piece would look like this:
 
 ![twinkle twinkle initial version](https://gitmusical.github.io/notating-twinkle/4-chord.png)
 
-You can also see and play the file on [LilyBin]().
+You can also see and play the file on [LilyBin](http://lilybin.com/7z8zgj/1).
 
 ### Key signatures on LilyPond
 
