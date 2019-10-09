@@ -58,6 +58,7 @@ steps:
         filename: twinkle-twinkle.ly
         action_id: twinkleFile
       - type: gate
+        every: true
         gates:
           - left: /^\s*f8\s+f\s+e\s+e\s*$/gm # create regex
             operator: test
