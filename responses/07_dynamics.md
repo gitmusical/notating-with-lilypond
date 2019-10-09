@@ -16,7 +16,7 @@ As you may have noticed, musical notation is typically associated with the pitch
   c8\mf c g' b
 ```
 
-As seen on [LilyPond's documentation](http://lilypond.org/doc/v2.18/Documentation/notation/expressive-marks-attached-to-notes), the available dynamic marks are \ppppp, \pppp, \ppp, \pp, \p, \mp, \mf, \f, \ff, \fff, \ffff, \fffff, \fp, \sf, \sff, \sp, \spp, \sfz, and \rfz.
+As seen on [LilyPond's documentation](http://lilypond.org/doc/v2.18/Documentation/notation/expressive-marks-attached-to-notes), the available dynamic marks are `\ppppp`, `\pppp`, `\ppp`, `\pp`, `\p`, `\mp`, `\mf`, `\f`, `\ff`, `\fff`, `\ffff`, `\fffff`, `\fp`, `\sf`, `\sff`, `\sp`, `\spp`, `\sfz`, and `\rfz`.
 
 ## Step 6: Change the dynamics
 
