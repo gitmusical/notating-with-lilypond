@@ -8,6 +8,10 @@ before:
   - type: createIssue
     title: Welcome!
     body: new-issue.md
+  - type: createPullRequest
+    title: New Song
+    head: twinkle-twinkle
+    base: master
 steps:
   - title: First step
     description: The first step in your course
