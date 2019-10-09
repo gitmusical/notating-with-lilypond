@@ -4,18 +4,210 @@ description: Learn how to notate music with Lilypond
 template:
   repo: notating-with-lilypond-template
   name: notating-with-lilypond
-before:
-  - type: createIssue
-    title: Welcome!
-    body: new-issue.md
+
+# ---
+# Step 1: change a note
+# prep for first step
+before: 
+  - type: updateBranchProtection
   - type: createPullRequest
     title: New Song
-    head: twinkle-twinkle
-    base: master
+    head: twinkle-twinkle # template: create a branch with twinkle twinkle, mess up one note, mess up one rhythm
+    body: 01_fix-note.md
 steps:
-  - title: First step
-    description: The first step in your course
-    event: issues.assigned
-    link: '{{ repoUrl }}'
+
+  - title: Change a note
+    description: Change a note
+    event: pull_request.synchronize
+    link: '{{ repoUrl }}/pulls/1'
     actions:
-      - type: closeIssue
+
+    # feedback for step 1: 
+      - type: getFileContents
+        filename: twinkle-twinkle.ly
+        action_id: twinkleFile
+      - type: gate
+        left: /.*/gi # create regex
+        operator: test
+        right: '%actions.twinkleFile%'
+        else:
+        - type: respond
+          with: 01e_retry-note.md
+
+# ---
+# Step 2: Change a rhythm
+  # user changes rhythm
+
+      # prep for step 2
+      - type: respond
+        with: 02_change-rhythm.md
+
+  - title: Change a rhythm
+    description: Change a rhythm
+    event: pull_request.synchronize
+    link: '{{ repoUrl }}/pulls/1'
+    actions:
+
+    # feedback for step 2: 
+    # - check if they changed a rhythm
+      - type: getFileContents
+        filename: twinkle-twinkle.ly
+        action_id: twinkleFile
+      - type: gate
+        left: /.*/gi # create regex
+        operator: test
+        right: '%actions.twinkleFile%'
+        else:
+    # - respond if they did it or not (possibly ask to redo)
+    # - tell them how to play it
+        - type: respond
+          with: 02e_retry-rhythm.md
+
+# ---
+# Step 3: Change time signature
+  # user to change time signature
+  # prep for step 3
+      - type: respond
+        with: 03_time-signature.md
+
+  - title: Change a time signature
+    description: Change a time signature
+    event: pull_request.synchronize
+    link: '{{ repoUrl }}/pulls/1'
+    actions:
+
+  # feedback for step 3:
+  # - check if they changed a time sig
+  # - respond if they did it or not (possibly ask to redo)
+      - type: getFileContents
+        filename: twinkle-twinkle.ly
+        action_id: twinkleFile
+      - type: gate
+        left: /.*/gi # create regex
+        operator: test
+        right: '%actions.twinkleFile%'
+        else:
+        - type: respond
+          with: 03e_retry-time-signature.md
+  # - tell them how to play it
+
+# ---
+# Step 4: Multiple notes (chord)
+  # prep for step 4
+      - type: respond
+        with: 04_chords.md
+
+  # user to create or change a chord:
+  - title: Create a chord
+    description: Create a chord
+    event: pull_request.synchronize
+    link: '{{ repoUrl }}/pulls/1'
+    actions:
+
+  # feedback for step 4:
+      - type: getFileContents
+        filename: twinkle-twinkle.ly
+        action_id: twinkleFile
+      - type: gate
+        left: /.*/gi # create regex
+        operator: test
+        right: '%actions.twinkleFile%'
+        else:
+        - type: respond
+          with: 04e_retry-chord.md
+
+# ---
+# Step 5: Change key signature
+  # user to: change key signature
+# prep for step 5:
+      - type: respond
+        with: 05_key-signature.md
+
+  - title: Change a key signature
+    description: Change a key signature
+    event: pull_request.synchronize
+    link: '{{ repoUrl }}/pulls/1'
+    actions:
+
+  # feedback for step 5:
+      - type: getFileContents
+        filename: twinkle-twinkle.ly
+        action_id: twinkleFile
+      - type: gate
+        left: /.*/gi # create regex
+        operator: test
+        right: '%actions.twinkleFile%'
+        else:
+        - type: respond
+          with: 05e-retry-key-signature.md
+
+# ---
+# Step 6: Accidentals
+  # user to: add an accidental
+  # prep for step 6:
+      - type: respond
+        with: 06_accidentals.md
+
+  - title: Add an accidental
+    description: Add an accidental
+    event: pull_request.synchronize
+    link: '{{ repoUrl }}/pulls/1'
+    actions:
+
+  # feedback for step 6:
+      - type: getFileContents
+        filename: twinkle-twinkle.ly
+        action_id: twinkleFile
+      - type: gate
+        left: /.*/gi # create regex
+        operator: test
+        right: '%actions.twinkleFile%'
+        else:
+        - type: respond
+          with: 06e_retry-accidental.md
+
+# ---
+# Step 7: Dynamics
+  # user to: add dynamic marking
+  # prep for step 7:
+      - type: respond
+        with: 07_dynamics.md
+
+  - title: Add a dynamic marking
+    description: Add a dynamic marking
+    event: pull_request.synchronize
+    link: '{{ repoUrl }}/pulls/1'
+    actions:
+
+  # feedback for step 7:
+      - type: getFileContents
+        filename: twinkle-twinkle.ly
+        action_id: twinkleFile
+      - type: gate
+        left: /.*/gi # create regex
+        operator: test
+        right: '%actions.twinkleFile%'
+        else:
+        - type: respond
+          with: 07e_retry-dynamic.md
+
+# ---
+# Step 8: Approve and merge
+# user to: approve and merge their PR
+  # prep for step 8
+      - type: respond
+        with: 08_merge.md
+
+  - title: Approve and merge the PR
+    description: Approve and merge the PR
+    event: pull_request.closed
+    link: '{{ repoUrl }}/pulls/1'
+    actions:
+
+    #feedback for step 8
+    - type: createPullRequest
+      title: Congratulations
+      body: 08_congratulations.md
+      head: congratulations
+    - type: respond
+      with: 08_next.md
