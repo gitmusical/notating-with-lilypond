@@ -163,7 +163,7 @@ steps:
         filename: twinkle-twinkle.ly
         action_id: twinkleFile
       - type: gate
-        left: /.*/gm # create regex
+        left: /^\s*a\s+aes\s+<\s*g\s+d\s*>4\s*$/gm # create regex
         operator: test
         right: '%actions.twinkleFile%'
         else:
