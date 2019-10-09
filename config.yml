@@ -29,7 +29,7 @@ steps:
         filename: twinkle-twinkle.ly
         action_id: twinkleFile
       - type: gate
-        left: /.*/gi # create regex
+        left: /^\s*c8\\mf\s+c\s+g'\s+g\s*$/gm # create regex
         operator: test
         right: '%actions.twinkleFile%'
         else:
@@ -58,9 +58,13 @@ steps:
         filename: twinkle-twinkle.ly
         action_id: twinkleFile
       - type: gate
-        left: /.*/gi # create regex
-        operator: test
-        right: '%actions.twinkleFile%'
+        gates:
+          - left: /^\s*f8\s+f\s+e\s+e\s*$/gm # create regex
+            operator: test
+            right: '%actions.twinkleFile%'
+          - left: /^\s*d\s+d\s+c4\s*$/gm
+            operator: test
+            right: '%actions.twinkleFile%'
         else:
     # - respond if they did it or not (possibly ask to redo)
     # - tell them how to play it
@@ -89,7 +93,7 @@ steps:
         filename: twinkle-twinkle.ly
         action_id: twinkleFile
       - type: gate
-        left: /.*/gi # create regex
+        left: /^\s*\\time\s+2\/4\s*$/gm # create regex
         operator: test
         right: '%actions.twinkleFile%'
         else:
@@ -117,7 +121,7 @@ steps:
         filename: twinkle-twinkle.ly
         action_id: twinkleFile
       - type: gate
-        left: /.*/gi # create regex
+        left: /^\s*d\s+d\s+<\s*c\s+g\s*>4\s*$/gm # create regex
         operator: test
         right: '%actions.twinkleFile%'
         else:
@@ -144,7 +148,7 @@ steps:
         filename: twinkle-twinkle.ly
         action_id: twinkleFile
       - type: gate
-        left: /.*/gi # create regex
+        left: /^\s*\\key\s+c\s+\\minor\s*$/gm # create regex
         operator: test
         right: '%actions.twinkleFile%'
         else:
@@ -171,7 +175,7 @@ steps:
         filename: twinkle-twinkle.ly
         action_id: twinkleFile
       - type: gate
-        left: /.*/gi # create regex
+        left: /^\s*a\s+aes\s+<\s*g\s+d\s*>4\s*$/gm # create regex
         operator: test
         right: '%actions.twinkleFile%'
         else:
@@ -198,7 +202,7 @@ steps:
         filename: twinkle-twinkle.ly
         action_id: twinkleFile
       - type: gate
-        left: /.*/gi # create regex
+        left: /^\s*f8\\p\s+f\se\se\s*$/gm # create regex
         operator: test
         right: '%actions.twinkleFile%'
         else:
@@ -209,6 +213,7 @@ steps:
 # Step 8: Approve and merge
 # user to: approve and merge their PR
   # prep for step 8
+      - type: requestReviewFromRegistrant
       - type: respond
         with: 08_merge.md
 
