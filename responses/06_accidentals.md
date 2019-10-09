@@ -6,7 +6,7 @@ We have created a version of the song in its current form, and [you can listen t
 
 Right now, the compiled piece would look like this:
 
-![twinkle twinkle initial version](https://gitmusical.github.io/notating-twinkle/5-key-sig)
+![twinkle twinkle initial version](https://gitmusical.github.io/notating-twinkle/5-key-sig.png)
 
 ### Accidentals on LilyPond
 
