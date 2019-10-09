@@ -1,10 +1,20 @@
 # Rhythm with LilyPond
 
+### Our project right now
+
+We have created a version of the song in its current form, and [you can listen to it here](https://gitmusical.github.io/notating-twinkle/1-pitch).
+
+Right now, the compiled piece would look like this:
+
+![twinkle twinkle initial version](https://gitmusical.github.io/notating-twinkle/1-pitch.png)
+
+### Rhythm
+
 In LilyPond, rhythm is dictated through symbols. As stated in [LilyPond's documentation](http://lilypond.org/doc/v2.18/Documentation/notation/writing-rhythms),
 
 > **Durations** are designated by numbers and dots, and entered as their reciprocal values. For example, a quarter note is entered using a 4 (since it is a 1/4 note), and a half note is entered using a 2 (since it is a 1/2 note). For notes longer than a whole you must use the \longa (a double breve) and \breve commands. Durations as short as 128th notes may be specified. Shorter values are possible, but only as beamed notes.
 
-### Rhythm in Twinkle Twinkle 
+### Rhythm in Twinkle Twinkle
 
 The duration of each note is defined with a **number** in the **same block with the pitches**. For twinkle twinkle little star, the long version would look like:
 

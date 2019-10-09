@@ -1,6 +1,12 @@
 # Accidentals
 
-Nice work! If you'd like to listen before we move on to the next step, here's how:
+### Our project right now
+
+We have created a version of the song in its current form, and [you can listen to it here](https://gitmusical.github.io/notating-twinkle/5-key-sig).
+
+Right now, the compiled piece would look like this:
+
+![twinkle twinkle initial version](https://gitmusical.github.io/notating-twinkle/5-key-sig)
 
 ### Accidentals on LilyPond
 

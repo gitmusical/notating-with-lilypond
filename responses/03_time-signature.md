@@ -1,6 +1,16 @@
 # Time signatures
 
-Great job! So far, you've edited pitches and rhythms. If you'd like to listen to the piece so far, here's how:
+### Our project right now
+
+Great job! So far, you've edited pitches and rhythms.
+
+We have created a version of the song in its current form, and [you can listen to it here](https://gitmusical.github.io/notating-twinkle/2-rhythm).
+
+Right now, the compiled piece would look like this:
+
+![twinkle twinkle initial version](https://gitmusical.github.io/notating-twinkle/2-rhythm.png)
+
+### Time Signatures
 
 Time signatures can be specified before a group of notes by `\time` followed by the time signature. (Ex: `\time 2/4 `).
 

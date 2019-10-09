@@ -35,6 +35,14 @@ Some of these letters, numbers, and symbols represent things related to the note
 
 We'll talk about some of the other symbols later on.
 
+### Our project right now
+
+We have created a version of the song in its current form, and [you can listen to it here](https://gitmusical.github.io/notating-twinkle/0-default).
+
+Right now, the compiled piece would look like this:
+
+![twinkle twinkle initial version](https://gitmusical.github.io/notating-twinkle/0-default.png)
+
 ## Step 1: Fix a note
 
 This pull request introduces a file called `twinkle-twinkle.ly`. This file is the notation of the melody from "Twinkle Twinkle Little Star". But, a few things are wrong. You'll notice that a note is wrong, and a rhythm is wrong - we'll fix the rhythm later. First, correct the note so it matches the traditional melody.
