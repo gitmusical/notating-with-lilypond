@@ -54,9 +54,13 @@ steps:
         filename: twinkle-twinkle.ly
         action_id: twinkleFile
       - type: gate
-        left: /.*/gm # create regex
-        operator: test
-        right: '%actions.twinkleFile%'
+        gates:
+          - left: /^\s*f8\s+f\s+e\s+e\s*$/gm # create regex
+            operator: test
+            right: '%actions.twinkleFile%'
+          - left: /^\s*d\s+d\s+c4\s*$/gm
+            operator: test
+            right: '%actions.twinkleFile%'
         else:
     # - respond if they did it or not (possibly ask to redo)
     # - tell them how to play it
