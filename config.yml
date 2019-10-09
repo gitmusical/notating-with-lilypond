@@ -1,6 +1,6 @@
-title: notating-with-lilypond
-tagline: A brand new course on Learning Lab
-description: Learn how to notate music with Lilypond
+title: Notating with LilyPond
+tagline: Learn how to notate music with LilyPond
+description: LilyPond is an open source technology for notating music in plain text files. In this course, we'll cover the fundamentals of music notation in LilyPond.
 template:
   repo: notating-with-lilypond-template
   name: notating-with-lilypond
