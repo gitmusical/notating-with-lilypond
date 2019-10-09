@@ -26,3 +26,5 @@ Let's add some drama and change the key to `c minor`.
 1. [Edit the `twinkle-twinkle.ly` file on this branch]({{ editUrl }})
 2. Add a line after the time signature to specify c minor as the key for this song
 3. Save and commit your changes to this branch
+
+I'll respond when I detect a new commit on this branch.

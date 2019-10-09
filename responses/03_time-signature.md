@@ -38,3 +38,5 @@ Right now, the time signature of this piece is not specified. Let's try out a ch
 1. [Edit the `twinkle-twinkle.ly` file on this branch]({{ editUrl }})
 2. Insert a line before the pitches start to declare a 2/4 time signature
 3. Save and commit your changes to this branch
+
+I'll respond when I detect a new commit on this branch.

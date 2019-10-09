@@ -37,3 +37,5 @@ If you sing, play, or read this music as it currently is, you will notice that t
 1. [Edit the `twinkle-twinkle.ly` file on this branch]({{ editUrl }})
 2. Identify and correct the rhythm in the pattern
 3. Save and commit your changes to this branch
+
+I'll respond when I detect a new commit on this branch.

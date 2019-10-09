@@ -27,3 +27,5 @@ Let's add another chord to the last note of the piece!
 1. [Edit the `twinkle-twinkle.ly` file on this branch]({{ editUrl }})
 2. Edit the last note to be a chord with the notes `c` and `g`
 3. Save and commit your changes to this branch
+
+I'll respond when I detect a new commit on this branch.
