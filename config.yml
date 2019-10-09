@@ -14,6 +14,8 @@ before:
     title: New Song
     head: twinkle-twinkle # template: create a branch with twinkle twinkle, mess up one note, mess up one rhythm
     body: 01_fix-note.md
+    data:
+      editUrl: '%payload.repository.html_url%/edit/twinkle-twinkle/twinkle-twinkle.ly?pr=/%payload.repository.full_name%/pull/1'
 steps:
 
   - title: Change a note
@@ -41,6 +43,8 @@ steps:
       # prep for step 2
       - type: respond
         with: 02_change-rhythm.md
+        data:
+          editUrl: '%payload.repository.html_url%/edit/twinkle-twinkle/twinkle-twinkle.ly?pr=/%payload.repository.full_name%/pull/1'
 
   - title: Change a rhythm
     description: Change a rhythm
@@ -69,6 +73,8 @@ steps:
   # prep for step 3
       - type: respond
         with: 03_time-signature.md
+        data:
+          editUrl: '%payload.repository.html_url%/edit/twinkle-twinkle/twinkle-twinkle.ly?pr=/%payload.repository.full_name%/pull/1'
 
   - title: Change a time signature
     description: Change a time signature
@@ -96,6 +102,8 @@ steps:
   # prep for step 4
       - type: respond
         with: 04_chords.md
+        data:
+          editUrl: '%payload.repository.html_url%/edit/twinkle-twinkle/twinkle-twinkle.ly?pr=/%payload.repository.full_name%/pull/1'
 
   # user to create or change a chord:
   - title: Create a chord
@@ -122,6 +130,8 @@ steps:
 # prep for step 5:
       - type: respond
         with: 05_key-signature.md
+        data:
+          editUrl: '%payload.repository.html_url%/edit/twinkle-twinkle/twinkle-twinkle.ly?pr=/%payload.repository.full_name%/pull/1'
 
   - title: Change a key signature
     description: Change a key signature
@@ -147,6 +157,8 @@ steps:
   # prep for step 6:
       - type: respond
         with: 06_accidentals.md
+        data:
+          editUrl: '%payload.repository.html_url%/edit/twinkle-twinkle/twinkle-twinkle.ly?pr=/%payload.repository.full_name%/pull/1'
 
   - title: Add an accidental
     description: Add an accidental
@@ -172,6 +184,8 @@ steps:
   # prep for step 7:
       - type: respond
         with: 07_dynamics.md
+        data:
+          editUrl: '%payload.repository.html_url%/edit/twinkle-twinkle/twinkle-twinkle.ly?pr=/%payload.repository.full_name%/pull/1'
 
   - title: Add a dynamic marking
     description: Add a dynamic marking
