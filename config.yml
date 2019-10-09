@@ -1,0 +1,17 @@
+title: notating-with-lilypond
+tagline: A brand new course on Learning Lab
+description: Learn how to notate music with Lilypond
+template:
+  repo: notating-with-lilypond-template
+  name: notating-with-lilypond
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
